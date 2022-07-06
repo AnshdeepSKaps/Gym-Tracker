@@ -9,7 +9,7 @@ export default function LastWorkout() {
 
     const fetchLastWorkout = async () => {
         console.log("Calling")
-        const last = await fetch('http://localhost:5000/fetch/last')
+        const last = await fetch('https://trackaps.herokuapp.com/fetch/last')
         const data = await last.json()
         setWorkout(data[0])
     }

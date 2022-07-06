@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Background from '../Components/Background'
 import Navbar from '../Components/Navbar'
 import WorkoutCarousel from '../Components/WorkoutCarousel'
-import LastWorkoutCarousel from '../Components/WorkoutCarousel'
 
 export default function LastWeek() {
 
@@ -10,7 +9,7 @@ export default function LastWeek() {
 
     const fetchWorkouts = async () => {
 
-        const resp = await fetch('http://localhost:5000/fetch/week')
+        const resp = await fetch('https://trackaps.herokuapp.com/fetch/week')
         const data = await resp.json()
         setWorkouts(data)
         console.log(data)
